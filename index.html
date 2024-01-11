@@ -17,7 +17,6 @@
         header {
             text-align: center;
             color: #3498db;
-            margin-bottom: 20px;
         }
 
         h1, h2, p {
@@ -29,6 +28,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
@@ -52,13 +52,12 @@
         .skills {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 20px;
         }
 
         .skill {
             background-color: #3498db;
             color: #fff;
-            padding: 8px 15px;
+            padding: 5px 10px;
             border-radius: 5px;
             margin-right: 10px;
             margin-bottom: 10px;
@@ -81,28 +80,6 @@
             color: #3498db;
         }
     </style>
-    <script>
-        // Function to calculate the duration dynamically
-        function calculateExperience() {
-            var startDate = new Date('May 2022');
-            var currentDate = new Date();
-            var months = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth());
-            var years = Math.floor(months / 12);
-            months = months % 12;
-            return years + ' years ' + months + ' months';
-        }
-
-        // Function to update the Work Experience section
-        function updateExperience() {
-            var experience = document.getElementById('experience');
-            experience.innerHTML = '<i class="fas fa-check"></i> Technical Associate - Cisco System Pvt Ltd, Bangalore (Adecco Payroll), May 2022 – Present';
-            experience.innerHTML += '<p><strong>Duration:</strong> ' + calculateExperience() + '</p>';
-            // Add other points or details as needed
-        }
-
-        // Run the updateExperience function when the page loads
-        window.onload = updateExperience;
-    </script>
 </head>
 <body>
     <header>
@@ -122,30 +99,48 @@
 
     <section class="work-experience">
         <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-        <div id="experience"></div>
+        <p><i class="fas fa-clock"></i> May 2022 – Present</p>
         <ul>
-            <!-- Points with icons added -->
             <li><i class="fas fa-check"></i> Day-to-day tasks of System Administration.</li>
             <li><i class="fas fa-check"></i> Installed, configured Cisco switches, network devices, IP cameras.</li>
             <li><i class="fas fa-check"></i> Troubleshooting and Configuration of SSH, FTP, NFS.</li>
-            <!-- Other points remain unchanged -->
+            <li><i class="fas fa-check"></i> Linux Package management tools (rpm, yum etc).</li>
+            <li><i class="fas fa-check"></i> Able to perform administration of hybrid cloud environment, configuration of HA/DR.</li>
+            <li><i class="fas fa-check"></i> Administrations of Users and Groups.</li>
+            <li><i class="fas fa-check"></i> Different types of Installation and configuration on RedHat, CentOS, Ubuntu.</li>
+            <li><i class="fas fa-check"></i> Database Knowledge with MYSQL.</li>
+            <li><i class="fas fa-check"></i> Proficient in managing Amazon Web Services (AWS) accounts.</li>
+            <li><i class="fas fa-check"></i> Administered an AWS Security Group to manage inbound and outbound traffic.</li>
+            <li><i class="fas fa-check"></i> Skilled in container technologies like Kubernetes and Docker.</li>
+            <li><i class="fas fa-check"></i> Managed infrastructure automation using Terraform.</li>
+            <li><i class="fas fa-check"></i> Proficient in vulnerability assessments and patch management.</li>
+            <li><i class="fas fa-check"></i> Experience working with AWS services, including EC2, ECS, EBS, S3, Lambda, ELB, Auto Scaling, SNS.</li>
         </ul>
     </section>
 
     <section class="projects-certificates">
         <h2><i class="fas fa-certificate"></i> Projects/Certificates</h2>
         <p><i class="fas fa-certificate"></i> Project: AWS High Availability Migration</p>
-        <!-- Other points remain unchanged -->
+        <p><i class="fas fa-info"></i> Description: Led the migration of a web application to AWS, utilizing Amazon EC2 for scalable computing capacity.</p>
+        <p><i class="fas fa-trophy"></i> Achievement: Implemented high availability by enabling Auto Scaling for the PHP-based website.</p>
+        <p><i class="fas fa-cogs"></i> Implemented Infrastructure: Established an RDS instance with MySQL DB to enhance reliability.</p>
+        <p><i class="fas fa-tasks"></i> Key Tasks:</p>
+        <ul>
+            <li><i class="fas fa-check"></i> Launched EC2 instances to support the scalable architecture.</li>
+            <li><i class="fas fa-check"></i> Created an RDS database and configured necessary tables.</li>
+            <li><i class="fas fa-check"></i> Configured the website hostname for seamless transition.</li>
+            <li><i class="fas fa-check"></i> Managed traffic effectively between EC2 instances and RDS to optimize performance.</li>
+        </ul>
         <p><i class="fas fa-certificate"></i> Completed Advanced Certificate in DevOps & Cloud Computing (Nov 2022-June 2023)</p>
     </section>
 
     <section class="skills">
         <h2><i class="fas fa-code"></i> Skills</h2>
-        <div class="skill"><i class="fas fa-laptop-code"></i> AWS</div>
+        <div class="skill"><i class="fab fa-aws"></i> AWS</div>
         <div class="skill"><i class="fab fa-docker"></i> Docker</div>
         <div class="skill"><i class="fas fa-cube"></i> Kubernetes</div>
         <div class="skill"><i class="fas fa-cogs"></i> Terraform</div>
-        <div class="skill"><i class="fab fa-ansible"></i> Ansible</div>
+        <div class="skill"><i class="fas fa-network-wired"></i> Ansible</div>
         <div class="skill"><i class="fab fa-git"></i> Git</div>
         <div class="skill"><i class="fab fa-jenkins"></i> Jenkins</div>
         <div class="skill"><i class="fas fa-database"></i> MySql</div>
@@ -154,7 +149,7 @@
 
     <section class="education">
         <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <p><i class="fas fa-graduation-cap"></i> Bachelor of Engineering (B.E): Visvesvaraya Technological University (VTU), Jan 2021<br>Institute: M. S. Engineering College, Bangalore</p>
+        <p><i class="fas fa-graduation-cap"></i> Bachelor of Engineering (B.E): Visvesvaraya Technological University (VTU), January 2021<br>Institute: M. S. Engineering College, Bangalore</p>
     </section>
 
     <footer>
