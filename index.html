@@ -17,6 +17,7 @@
         header {
             text-align: center;
             color: #3498db;
+            margin-bottom: 20px;
         }
 
         h1, h2, p {
@@ -28,7 +29,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
             margin-bottom: 20px;
         }
 
@@ -62,66 +62,57 @@
             border-radius: 5px;
             margin-right: 10px;
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
 
-        /* Styling for Education and Certificates sections */
-        .education, .certificates, .projects-certificates {
-            margin-bottom: 20px;
+        .skill i {
+            margin-right: 5px;
         }
 
-        .education p, .certificates li, .projects-certificates p {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-        }
-
-        .education i, .certificates i, .projects-certificates i {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #e74c3c;
-        }
-
-        /* Styling for Work Experience section */
-        .work-experience {
-            margin-bottom: 20px;
-        }
-
-        .work-experience h2, .work-experience p, .work-experience ul, .work-experience li {
-            margin: 0;
-            padding: 0;
-        }
-
-        .work-experience h2 {
+        /* Styling for Icons */
+        .fas, .fab {
+            margin-right: 5px;
             color: #3498db;
-            margin-bottom: 10px;
         }
 
-        .work-experience p {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-        }
-
-        .work-experience i {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+        .far {
+            margin-right: 5px;
             color: #3498db;
         }
     </style>
+    <script>
+        // Function to calculate the duration dynamically
+        function calculateExperience() {
+            var startDate = new Date('May 2022');
+            var currentDate = new Date();
+            var months = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth());
+            var years = Math.floor(months / 12);
+            months = months % 12;
+            return years + ' years ' + months + ' months';
+        }
+
+        // Function to update the Work Experience section
+        function updateExperience() {
+            var experience = document.getElementById('experience');
+            experience.innerHTML = '<i class="fas fa-check"></i> Technical Associate - Cisco System Pvt Ltd, Bangalore (Adecco Payroll), May 2022 – Present';
+            experience.innerHTML += '<p><strong>Duration:</strong> ' + calculateExperience() + '</p>';
+            // Add other points or details as needed
+        }
+
+        // Run the updateExperience function when the page loads
+        window.onload = updateExperience;
+    </script>
 </head>
 <body>
     <header>
         <h1>Sai Krishna G</h1>
-        <p>System Administrator</p>
-        <p>Bengaluru, IN | (+91) 8970256425 | krishnaaira1521@gmail.com</p>
+        <p><i class="fas fa-briefcase"></i> System Administrator</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bengaluru, IN | <i class="fas fa-phone"></i> (+91) 8970256425 | <i class="far fa-envelope"></i> krishnaaira1521@gmail.com</p>
     </header>
 
     <section>
-        <h2>About Me</h2>
+        <h2><i class="fas fa-user"></i> About Me</h2>
         <p>
             Experienced System Administrator with 1.7 years of hands-on expertise in managing diverse systems and networks.
             Proficient in routine upgrades, issue resolution, and ensuring IT infrastructure stability. Skilled in AWS for effective
@@ -130,9 +121,10 @@
     </section>
 
     <section class="work-experience">
-        <h2>Work Experience</h2>
-        <p><i class="fas fa-briefcase"></i> Technical Associate - Cisco System Pvt Ltd, Bangalore (Adecco Payroll), May 2022 – Present</p>
+        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div id="experience"></div>
         <ul>
+            <!-- Points with icons added -->
             <li><i class="fas fa-check"></i> Day-to-day tasks of System Administration.</li>
             <li><i class="fas fa-check"></i> Installed, configured Cisco switches, network devices, IP cameras.</li>
             <li><i class="fas fa-check"></i> Troubleshooting and Configuration of SSH, FTP, NFS.</li>
@@ -141,23 +133,28 @@
     </section>
 
     <section class="projects-certificates">
-        <h2>Projects/Certificates</h2>
+        <h2><i class="fas fa-certificate"></i> Projects/Certificates</h2>
         <p><i class="fas fa-certificate"></i> Project: AWS High Availability Migration</p>
         <!-- Other points remain unchanged -->
-        <p><i class="fas fa-certificate"></i> Completed Advanced Certificate in DevOps & Cloud Computing (From Nov 2022-June 2023)</p>
+        <p><i class="fas fa-certificate"></i> Completed Advanced Certificate in DevOps & Cloud Computing (Nov 2022-June 2023)</p>
     </section>
 
     <section class="skills">
-        <h2>Skills</h2>
-        <div class="skill">AWS</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Kubernetes</div>
-        <!-- Other skills remain unchanged -->
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skill"><i class="fas fa-laptop-code"></i> AWS</div>
+        <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+        <div class="skill"><i class="fas fa-cube"></i> Kubernetes</div>
+        <div class="skill"><i class="fas fa-cogs"></i> Terraform</div>
+        <div class="skill"><i class="fab fa-ansible"></i> Ansible</div>
+        <div class="skill"><i class="fab fa-git"></i> Git</div>
+        <div class="skill"><i class="fab fa-jenkins"></i> Jenkins</div>
+        <div class="skill"><i class="fas fa-database"></i> MySql</div>
+        <div class="skill"><i class="fas fa-chart-bar"></i> Power BI</div>
     </section>
 
     <section class="education">
-        <h2>Education</h2>
-        <p><i class="fas fa-graduation-cap"></i> Bachelor of Engineering (B.E): Visvesvaraya Technological University (VTU), January 2021<br>Institute: M. S. Engineering College, Bangalore</p>
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p><i class="fas fa-graduation-cap"></i> Bachelor of Engineering (B.E): Visvesvaraya Technological University (VTU), Jan 2021<br>Institute: M. S. Engineering College, Bangalore</p>
     </section>
 
     <footer>
